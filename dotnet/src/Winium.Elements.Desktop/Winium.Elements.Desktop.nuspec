@@ -3,17 +3,21 @@
   <metadata>
     <id>$id$</id>
     <version>$version$</version>
-    <authors>2GIS</authors>
-    <owners>2GIS</owners>
-    <projectUrl>https://github.com/2gis/Winium.Elements</projectUrl>
+    <authors>kgmouri</authors>
+    <owners>kgmouri</owners>
+    <projectUrl>https://github.com/kgmouri/Winium.Elements</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
     <releaseNotes>
 v0.2.0
 - Support Selenium.WebDriver bindings version 2.8.0
 - Use Winium.WebDriver nuget package (create WiniumDriver driver in your tests)
+
+v.0.3.0
+- Support Selenium.WebDriver bindings version 3.141.0
+- Use Winium-WebDriver nuget package (create WiniumDriver driver in your tests)
 </releaseNotes>
-    <copyright>Copyright @ 2015</copyright>
+    <copyright>Copyright @ 2020</copyright>
     <tags>Winium Desktop Selenium</tags>
   </metadata>
 </package>

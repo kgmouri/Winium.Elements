@@ -1,6 +1,10 @@
 ﻿# Change Log
 
 <!--## Unreleased-->
+
+## v0.3.0
+- Support Selenium.WebDriver bindings version 3.141.0
+- Use Winium-WebDriver nuget package (create WiniumDriver driver in your tests)
 ## v0.2.0
 
 - Support Selenium.WebDriver bindings version 2.8.0
