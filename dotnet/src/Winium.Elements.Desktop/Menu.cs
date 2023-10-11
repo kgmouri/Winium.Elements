@@ -4,8 +4,7 @@
 
     using System.Collections.Generic;
 
-    using OpenQA.Selenium;
-    using OpenQA.Selenium.Remote;
+    using OpenQA.Selenium.Winium;
 
     #endregion
 
@@ -21,7 +20,7 @@
 
         #region Constructors and Destructors
 
-        public Menu(IWebElement element)
+        public Menu(WiniumElement element)
             : base(element)
         {
         }
@@ -30,12 +29,12 @@
 
         #region Public Methods and Operators
 
-        public RemoteWebElement FindItem(string path)
+        public WiniumElement FindItem(string path)
         {
             return this.CallMenuItemCommand(FindMenuItem, path);
         }
 
-        public RemoteWebElement SelectItem(string path)
+        public WiniumElement SelectItem(string path)
         {
             return this.CallMenuItemCommand(SelectMenuItem, path);
         }
@@ -44,12 +43,12 @@
 
         #region Methods
 
-        private RemoteWebElement CallMenuItemCommand(string command, string path)
+        private WiniumElement CallMenuItemCommand(string command, string path)
         {
             var parameters = new Dictionary<string, object> { { "id", this.Id }, { "path", path } };
             var response = this.Execute(command, parameters);
 
-            return this.CreateRemoteWebElementFromResponse(response);
+            return this.CreateWiniumElementFromResponse(response);
         }
 
         #endregion

@@ -5,9 +5,7 @@
     using System.Collections.Generic;
 
     using OpenQA.Selenium;
-    using OpenQA.Selenium.Remote;
-
-    using Winium.Elements.Desktop.Extensions;
+    using OpenQA.Selenium.Winium;
 
     #endregion
 
@@ -29,7 +27,7 @@
 
         #region Constructors and Destructors
 
-        public ComboBox(IWebElement element)
+        public ComboBox(WiniumElement element)
             : base(element)
         {
         }
@@ -63,23 +61,23 @@
             this.CallComboBoxCommand(ExpandComboBox);
         }
 
-        public RemoteWebElement FindSelected(int row, int column)
+        public WiniumElement FindSelected(int row, int column)
         {
-            return this.CreateRemoteWebElementFromResponse(this.CallComboBoxCommand(FindComboBoxSelectedItem));
+            return this.CreateWiniumElementFromResponse(this.CallComboBoxCommand(FindComboBoxSelectedItem));
         }
 
-        public RemoteWebElement ScrollTo(By by)
+        public WiniumElement ScrollTo(WiniumBy by)
         {
             var response = this.Execute(
                 ScrollToComboBoxItem,
                 new Dictionary<string, object>
                     {
                         { "id", this.Id },
-                        { "using", by.GetStrategy() },
-                        { "value", by.GetValue() },
+                        { "using", by.Mechanism },
+                        { "value", by.Criteria },
                     });
 
-            return this.CreateRemoteWebElementFromResponse(response);
+            return this.CreateWiniumElementFromResponse(response);
         }
 
         #endregion

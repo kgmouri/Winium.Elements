@@ -4,10 +4,7 @@
 
     using System.Collections.Generic;
 
-    using OpenQA.Selenium;
-    using OpenQA.Selenium.Remote;
-
-    using Winium.Elements.Desktop.Extensions;
+    using OpenQA.Selenium.Winium;
 
     #endregion
 
@@ -21,7 +18,7 @@
 
         #region Constructors and Destructors
 
-        public ListBox(IWebElement element)
+        public ListBox(WiniumElement element)
             : base(element)
         {
         }
@@ -30,18 +27,18 @@
 
         #region Public Methods and Operators
 
-        public RemoteWebElement ScrollTo(By by)
+        public WiniumElement ScrollTo(WiniumBy by)
         {
             var response = this.Execute(
                 ScrollToListBoxItem,
                 new Dictionary<string, object>
                     {
                         { "id", this.Id },
-                        { "using", by.GetStrategy() },
-                        { "value", by.GetValue() },
+                        { "using", by.Mechanism },
+                        { "value", by.Criteria },
                     });
 
-            return this.CreateRemoteWebElementFromResponse(response);
+            return this.CreateWiniumElementFromResponse(response);
         }
 
         #endregion

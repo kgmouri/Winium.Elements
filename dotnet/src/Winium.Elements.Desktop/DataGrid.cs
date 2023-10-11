@@ -5,7 +5,7 @@
     using System.Collections.Generic;
 
     using OpenQA.Selenium;
-    using OpenQA.Selenium.Remote;
+    using OpenQA.Selenium.Winium;
 
     #endregion
 
@@ -27,7 +27,7 @@
 
         #region Constructors and Destructors
 
-        public DataGrid(IWebElement element)
+        public DataGrid(WiniumElement element)
             : base(element)
         {
         }
@@ -62,9 +62,9 @@
 
         #region Public Methods and Operators
 
-        public RemoteWebElement Find(int row, int column)
+        public WiniumElement Find(int row, int column)
         {
-            return this.CreateRemoteWebElementFromResponse(this.CallDataGridcellCommand(FindDataGridCell, row, column));
+            return this.CreateWiniumElementFromResponse(this.CallDataGridcellCommand(FindDataGridCell, row, column));
         }
 
         public void ScrollTo(int row, int column)
