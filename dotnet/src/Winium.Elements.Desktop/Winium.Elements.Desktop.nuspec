@@ -5,12 +5,14 @@
     <version>$version$</version>
     <authors>kgmouri</authors>
     <owners>kgmouri</owners>
-    <license type="expression">MIT</license>
+    <license type="expression">MPL-2.0</license>
     <projectUrl>https://github.com/kgmouri/Winium.Elements</projectUrl>
     <readme>README.md</readme>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
     <releaseNotes>
+v1.0.1
+- Fixed a minor configuration error.
 v1.0.0
 - Support Selenium.WebDriver bindings version 4.11.0
 - Support Winium-WebDriver bindings version 1.0.0
@@ -24,7 +26,7 @@ v0.2.0
     <copyright>Copyright @ 2023</copyright>
     <tags>Winium WebDriver Selenium C#</tags>
     <dependencies>
-      <dependency id="Winium-WebDriver" version="[1.0.0]" />
+      <dependency id="Winium-WebDriver" version="[1.0.1]" />
     </dependencies>
   </metadata>
   <files>
