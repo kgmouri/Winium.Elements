@@ -11,6 +11,9 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
     <releaseNotes>
+v1.1.0
+- Support Selenium.WebDriver bindings version 4.16.2
+- Support Winium-WebDriver bindings version 1.1.0
 v1.0.1
 - Fixed a minor configuration error.
 v1.0.0
@@ -26,7 +29,7 @@ v0.2.0
     <copyright>Copyright @ 2023</copyright>
     <tags>Winium WebDriver Selenium C#</tags>
     <dependencies>
-      <dependency id="Winium-WebDriver" version="[1.0.1]" />
+      <dependency id="Winium-WebDriver" version="[1.1.0]" />
     </dependencies>
   </metadata>
   <files>
