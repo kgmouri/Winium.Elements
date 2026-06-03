@@ -2,6 +2,10 @@
 
 <!--## Unreleased-->
 
+## v1.3.0
+- Support Selenium.WebDriver bindings version 4.40.0
+- Support Winium-WebDriver bindings version 1.3.0
+
 ## v1.2.0
 - Support Selenium.WebDriver bindings version 4.21.0
 - Support Winium-WebDriver bindings version 1.2.0
